@@ -1,0 +1,19 @@
+{
+  "Lua.diagnostics.globals": [
+      "Actor",
+      "ActorFrame",
+      "Steps",
+      "xero",
+      "_G.xero",
+      "GAMESTATE",
+      "SCREENMAN",
+      "SCREEN_CENTER_X",
+      "SCREEN_CENTER_Y",
+      "SCREEN_WIDTH",
+      "SCREEN_HEIGHT",
+      "DISPLAY"
+  ],
+  "files.readonlyInclude": {
+      ".vscode/docs/notitg/**": false
+  }
+}
