@@ -1,1 +1,9 @@
 **/.DS_Store
+*
+!.gitignore
+!.vscode/**/*.lua
+!.vscode/**/*.json
+!.luarc.json
+!README.md
+!*/
+.vscode/docs/mods/layout.lua
