@@ -39,7 +39,7 @@ local function convert_file_to_nitg_lua_declarations(filename, outfilename)
 	out:write("---@meta _\n")
 	out:write("---@diagnostic disable: undefined-global, lowercase-global, missing-fields\n")
 
-		for tag, properties in contents:gmatch("[^<]*<([^ \n>=]+) *([^>]-) */?>\n?") do
+		for tag, properties in contents:gsub("<!%-%-.-%-%->",""):gmatch("[^<]*<([^ \n>=]+) *([^>]-) */?>\n?") do
 		local type = types[tag] and tag or "Actor"
 		local name = nil
 		for prop, id in properties:gmatch("([^=]-) *= *\"(%d+)\" *") do
@@ -70,6 +70,16 @@ local function convert_file_to_nitg_lua_declarations(filename, outfilename)
 
 end
 
-local input = arg[1] or "lua/layout.xml"
-local output = arg[2] or ".vscode/docs/mods/layout.lua"
+local input = "lua/layout.xml"
+local output = ".vscode/docs/mods/layout.lua"
+
+for i,v in ipairs(arg) do
+	if v == "-in" and arg[i+1] ~= nil then
+		input = arg[i+1]
+	end
+	if v == "-out" and arg[i+1] ~= nil then
+		output = arg[i+1]
+	end
+end
+
 convert_file_to_nitg_lua_declarations(input, output)
