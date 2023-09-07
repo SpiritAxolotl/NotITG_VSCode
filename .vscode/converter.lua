@@ -23,12 +23,15 @@ local types = {
 }
 
 local loadstring = loadstring or load
-local function convert_file_to_nitg_lua_declarations(filename, outfilename)
-	local out = io.open(outfilename, "w")
+local function convert_file_to_nitg_lua_declarations(filename)
+	filename = filename:gsub("%.xml", ""):sub(3)
+	os.execute("mkdir -p .vscode/docs/mods/"..filename:sub(1, filename:match("^.*/()") -1))
+	
+	local out = io.open(".vscode/docs/mods/"..filename..".lua", "w")
 
 	local strings, i = {}, 0
 
-	local contents = io.open(filename):read("*a"):gsub("\".-\"", function(str)
+	local contents = io.open(filename..".xml"):read("*a"):gsub("\".-\"", function(str)
 		i = i + 1
 		strings[tostring(i)] = str:gsub("\n", "\\n"):sub(2, -2)
 		return "\"" .. i .. "\""
@@ -82,4 +85,4 @@ for i,v in ipairs(arg) do
 	end
 end
 
-convert_file_to_nitg_lua_declarations(input, output)
+convert_file_to_nitg_lua_declarations(input)
