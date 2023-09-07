@@ -8,7 +8,7 @@ Requires the following to work:
 - Lua 5.1 installed on your machine
 
 Recommended:
-- [XML (Stepmania)](https://marketplace.visualstudio.com/items?itemName=fms-cat.xml-stepmania)
+- [XML (Stepmania) Extension](https://marketplace.visualstudio.com/items?itemName=fms-cat.xml-stepmania)
 
 ## Installing Lua:
 ### Windows
