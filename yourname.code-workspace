@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {"path": "."}
+  ],
+  "settings": {
+    "editor.mouseWheelZoom": false,
+    "saveAndRun": {
+      "commands": [
+        {
+          "match": ".+\\.xml$",
+          "isAsync": true,
+          //remember to change <PATH> to your project directory!
+          //also remember to double your backslashes because of json
+          "cmd": "cd <PATH> ; lua .vscode/converter.lua -in ${relativeFile}"
+        }
+      ]
+    }
+  }
+}

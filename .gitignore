@@ -3,6 +3,7 @@
 !.gitignore
 !.vscode/**/*.lua
 !.vscode/**/*.json
+!yourname.code-workspace
 !.luarc.json
 !README.md
 !*/
