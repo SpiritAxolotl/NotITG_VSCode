@@ -43,7 +43,6 @@ https://lifning.neocities.org/BBHL
 - [Spax](https://github.com/SpiritAxolotl) for starting this project  
 - [GS](https://github.com/GrandpaScout) for his [FiguraVSDocs](https://github.com/GrandpaScout/FiguraRewriteVSDocs) that inspired this project to begin with, as well as answering many VSCode and Lua questions  
 - [CraftedCart](https://gitlab.com/CraftedCart) for her [unofficial NotITG documentation](https://craftedcart.gitlab.io/notitg_docs/) that was used for most of the API  
-- [XeroOl](https://github.com/XeroOl) for making the [mirin template](https://xerool.github.io/notitg-mirin/)  
-- [Oatmealine](https://oat.zone) for general help and providing the `converter.lua` file  
-- Whoever originally made the `converter.lua` file  
+- [XeroOl](https://github.com/XeroOl) for making the [mirin template](https://xerool.github.io/notitg-mirin/) and the [`converter.lua`](https://github.com/XeroOl/notitg-xml-to-emmylua) file  
+- [Oatmealine](https://oat.zone) for general help  
 - [Taro](https://github.com/TaroNuke), [Sora](https://heysora.net), and the rest of the team that created NotITG and the community surrounding it
